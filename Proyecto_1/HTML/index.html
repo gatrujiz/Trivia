@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Trivia</title>
+</head>
+
+<body>
+  <section id="page_1">
+    <h1>¡Es hora de jugar!</h1>
+    <p>Antes de empezar, por favor escribe tu nombre, debe tener mínimo 2 carácteres.</p>
+    <label for="uname">Elige un nombre especial para ti: </label>
+    <input type="text" id="uname" minlength="2">
+    <button type="button" onclick="getName()">Enviar</button>
+  </section>
+  <!-- Sección de decidir que tipo de trivia-->
+  <section id="page_2">
+    <h1 id="saludo"></h1>
+    <p>Estás por jugar un juego divertido, por favor selecciona la categoría que deseas jugar:</p>
+    <button type="button" onclick="pasarPagina('page_2', 'page_3')">Acertijos</button>
+    <button type="button" onclick="pasarPagina('page_2', 'page_6')">Viajeros</button>
+  </section>
+<!-- Sección de preguntas acertijos -->
+  <section id="page_3">
+    <div>
+      <h3>Pregunta 1</h3>
+      <p>Un avión lleno de chilenos cae en la frontera con Argentina.</p>
+      <p>¿Donde entierran a los sobrevivientes?</p>
+      <input type=radio name="pregunta_1" value="No los entierran." checked>No los entierran.<br>
+      <input type=radio name="pregunta_1" value="Chile.">Chile.<br>
+      <input type=radio name="pregunta_1" Value="Argentina.">Argentina.<br>
+      <br><button type="button" onclick="pasarPagina('page_3', 'page_4')">Siguiente</button>
+    </div>
+  </section>
+  <section id="page_4">
+    <div>
+      <h3>Pregunta 2</h3>
+      <p>Estás escapando de un laberinto, y tienes tres puertas delante.<br>
+        <li> La puerta de la izquierda lleva a un ardiente infierno.</li>
+        <li> La puerta del centro a un brutal asesino.</li>
+        <li> La puerta de la derecha a un león que no ha comido en un año.</li>
+      <p>¿Qué puerta escoges?</p>
+      <input type=radio name="pregunta_2" value="Puerta de la izquierda." checked> Puerta de la izquierda.<br>
+      <input type=radio name="pregunta_2" value="Puerta del centro."> Puerta del centro.<br>
+      <input type=radio name="pregunta_2" value="Puerta de la derecha."> Puerta de la derecha.<br>
+      <br><button type="button" onclick="pasarPagina('page_4', 'page_5')">Siguiente</button>
+    </div>
+  </section>
+  <section id="page_5">
+    <div>
+      <h3>Pregunta 3</h3>
+      <p>¿Cuantos cienes tiene el número 572?</p>
+      <input type=radio name="pregunta_3" value="Dos." checked> Dos.<br>
+      <input type=radio name="pregunta_3" value="Tres."> Tres.<br>
+      <input type=radio name="pregunta_3" value="Cinco."> Cinco.<br>
+      <br><button type="button" onclick="pasarPagina('page_5', 'page_9')">Siguiente</button>
+    </div>
+  </section>
+<!-- Sección de preguntas viajeros -->
+  <section id="page_6">
+    <div>
+      <h3>Pregunta 1</h3>
+      <p>¿Donde está la Torre Eiffel?</p>
+      <input type=radio name="pregunta_4" value="Italia." checked> Italia.<br>
+      <input type=radio name="pregunta_4" value="Francia."> Francia.<br>
+      <input type=radio name="pregunta_4" value="Grecia."> Grecia.<br>
+      <br><button type="button" onclick="pasarPagina('page_6', 'page_7')">Siguiente</button>
+    </div>
+  </section>
+
+  <section id="page_7">
+    <div>
+      <h3>Pregunta 2</h3>
+      <p>¿Cuál es el río más largo del mundo?</p>
+      <input type=radio name="pregunta_5" value="Nilo." checked> Nilo.<br>
+      <input type=radio name="pregunta_5" value="Amazonas."> Amazonas.<br>
+      <input type=radio name="pregunta_5" value="Eufrates."> Eufrates.<br>
+      <br><button type="button" onclick="pasarPagina('page_7', 'page_8')">Siguiente</button>
+    </div>
+  </section>
+
+ <section id="page_8">
+    <div>
+      <h3>Pregunta 3</h3>
+      <p>¿De qué país es el ramen?</p>
+      <input type=radio name="pregunta_6" value="México." checked> México.<br>
+      <input type=radio name="pregunta_6" value="India."> India.<br>
+      <input type=radio name="pregunta_6" value="Japón."> Japón.<br>
+      <br><button type="button" onclick="pasarPagina('page_8', 'page_10')">Siguiente</button>
+    </div>
+  </section>
+
+<!-- Sección de validación de respuestas -->
+  <section id="page_9">
+    <p>
+      Es momento de ver lo que has aprendido, da clic en el botón y conoce tus resultados.
+    </p>
+    <br><input type="button" name="respuestas" value="Responder y ver resultados" onclick="verRespuestas(['pregunta_1', 'pregunta_2', 'pregunta_3'])">
+  </section>
+
+<section id="page_10">
+   <p>
+      Es momento de ver lo que has aprendido, da clic en el botón y conoce tus resultados.
+    </p>
+    <br><input type="button" name="respuestas_2" value="Responder y ver resultados" onclick="verRespuestas(['pregunta_4', 'pregunta_5', 'pregunta_6'])">
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

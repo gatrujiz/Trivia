@@ -1,0 +1,58 @@
+
+#page_2{
+  display: none;
+}
+
+#page_3{
+  display: none;
+}
+
+#page_4{
+  display: none;
+}
+
+#page_5{
+  display: none;
+}
+
+#page_6{
+  display: none;
+}
+
+#page_7{
+  display: none;
+}
+
+#page_8{
+  display: none;
+}
+
+#page_9{
+  display: none;
+}
+
+#page_10{
+  display: none;
+}
+
+html {
+  background-color: #a3f9ff;
+  font: 100% sans-serif ;
+}
+
+h1 {
+  font: bold 170% cursive ;
+}
+
+h3 {
+  font: bold 130% cursive ;
+}
+
+p {
+  font: 100% sans-serif ;
+}
+
+label {
+  font: 100% sans-serif ;
+}
+ 
